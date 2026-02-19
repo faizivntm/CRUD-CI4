@@ -1,70 +1,79 @@
-# CodeIgniter 4 Application Starter
+CRUD Apps Sederhana - Test Intisera
+Aplikasi manajemen inventaris barang sederhana yang dibangun menggunakan CodeIgniter 3. Proyek ini merupakan bagian dari tes teknis untuk posisi Developer di Intisera.
 
-## What is CodeIgniter?
+🚀 Fitur Utama
+Autentikasi User: Login menggunakan database (Username: admin, Password: 123456).
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+Manajemen Barang (CRUD):
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+Tambah data barang dengan validasi form.
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+Tampil daftar barang dalam bentuk tabel.
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+Edit/Update data barang.
 
-## Installation & updates
+Hapus data barang.
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+Dashboard Analytics: Menampilkan ringkasan total harga barang berdasarkan kategori.
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+Security: Validasi input server-side menggunakan Form Validation CI3 dan manajemen session untuk login/logout.
 
-## Setup
+🛠️ Teknologi yang Digunakan
+Framework: CodeIgniter 3.1.x
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+Bahasa: PHP
 
-## Important Change with index.php
+Database: MySQL
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+UI/Styling: Bootstrap 4/5
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+Web Server: Apache (XAMPP/Laragon)
 
-**Please** read the user guide for a better explanation of how CI4 works!
+📋 Persiapan & Instalasi
+Clone Repository
 
-## Repository Management
+Bash
+git clone https://github.com/username-kamu/nama-repo.git
+Konfigurasi Database
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+Buat database baru di phpMyAdmin dengan nama db_intisera (atau sesuai keinginan).
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+Import file .sql yang berada di folder DATABASE/ ke dalam database tersebut.
 
-## Server Requirements
+Buka file application/config/database.php dan sesuaikan username/password MySQL kamu.
 
-PHP version 8.2 or higher is required, with the following extensions installed:
+Konfigurasi Base URL
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+Buka application/config/config.php.
 
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - The end of life date for PHP 8.1 was December 31, 2025.
-> - If you are still using below PHP 8.2, you should upgrade immediately.
-> - The end of life date for PHP 8.2 will be December 31, 2026.
+Ubah $config['base_url'] sesuai dengan path folder project kamu (contoh: http://localhost/crud-intisera/).
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+Akses Aplikasi
 
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
-# CRUD-CI4
+Buka browser dan akses URL tersebut.
+
+Login Akun:
+
+Username: admin
+
+Password: 123456
+
+📂 Struktur Folder Database
+Pastikan kamu mengecek folder berikut untuk keperluan setup awal:
+
+Plaintext
+/DATABASE
+└── intisera_test.sql <-- Import file ini
+📝 Detail Modul Barang
+Input data barang meliputi:
+
+Nama Barang
+
+Kategori: Smartphone, Notebook, Keyboard, Mouse, Hardisk.
+
+Harga: (Validasi angka wajib).
+
+Tanggal Pembelian: (Date picker).
+
+Kontak
+Jika ada pertanyaan mengenai teknis implementasi, silakan hubungi saya melalui email atau pesan di GitHub ini.
