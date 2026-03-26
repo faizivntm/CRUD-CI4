@@ -1,5 +1,5 @@
-# 📦 CRUD Inventory App - Test Intisera
-Aplikasi Management Barang Sederhana menggunakan **CodeIgniter 3**, **MySQL**, dan **Bootstrap**. Project ini dibuat sebagai bagian dari seleksi kandidat di Intisera.
+# 📦 CRUD Inventory App
+Aplikasi Management Barang Sederhana menggunakan **CodeIgniter 3**, **MySQL**, dan **Bootstrap**. Project ini dibuat sebagai bagian dari tahap seleksi kandidat.
 
 ---
 
